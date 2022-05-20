@@ -1,0 +1,48 @@
+
+    {{!-- <div class="text-center center-div" id="login" style="height: 100vh;">
+        <div class="container w-25 border py-5">
+            <div class="title">
+                <h2 class="font-weight-nbold">LOGIN</h2>
+                <small class="form-text text-muted text-left">Registered email</small>
+                <span>
+                </span>
+            </div>
+            <form action="/route/login" method="post" class="pt-3">
+                <div class="form-group">
+                    <input type="email" class="form-control" placeholder="email" name="email">
+                    <small class="form-text text-muted text-left">Password</small>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" name="password" placeholder="password">
+
+                </div>
+                <button type="submit" class="btn btn-success mt-3 w-10 btn-usr">login</button>
+                <button type="submit" class="btn btn-success mt-3 w-10 btn-usr">SingUp</button>
+            </form>
+        </div>
+
+    </div> --}}
+
+<div class="row">
+    <div class="col-md-6 m-auto">
+        <div class="container mt-5 pl-5">
+            <h2 class="text-center">Login</h2>
+            <form action="/login" method="post">
+            {{#if loginErr}}
+            <p class="error">{{loginErr}}</p>
+
+            {{/if}}
+                <div class="form-group">
+                    <label>Email address</label>
+                    <input type="email" class="form-control" name="Email" placeholder="Enter email">
+                </div>
+                 <div class="form-group">
+                    <label>Password</label>
+                    <input type="Password" class="form-control" name="Password" placeholder="Enter email">
+                </div>
+                <a href="/signup">Create new Account?</a>
+                <button type="submit" class="btn btn-primary float-center">Login</button>
+            </form>
+        </div>
+    </div>
+</div>
